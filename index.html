@@ -3,97 +3,184 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" type="text/css" href="css/w3.css">
   <link rel="stylesheet" type="text/css" href="css/myStyle.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,500i,700" rel="stylesheet">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
 <title>Steve Darrow, LCSW</title>
 </head>
 
 <body>
-  <!-- Simple script to display current width of window: for responsive design -->
-  <p>Window Size: <span id="size"></span>px</p>
-  <script>
-  window.onresize = function() {
-  document.getElementById("size").innerHTML = window.innerWidth;
-  };
-  </script>
 
-<!-- Top navigation -->
+<!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-padding-large color-dark-brown text-light">
-    <a href="#home" class="w3-bar-item">Steve Darrow, LCSW</a>
+  <div class="w3-bar w3-padding-small color-dark-brown text-light">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-hover-none w3-xlarge w3-hover-text-white">
+    <i class="w3-margin-right" style="font-family:Georgia"></i>Steve Darrow, LCSW</a>
+  <a href="tel:408-985-1217" class="w3-bar-item w3-button w3-padding-16 w3-hover-none w3-large w3-text-lime w3-hover-text-lime w3-hide-small">
+    <i class="w3-margin-right"></i>(408) 985-1217</a>
     <!-- Right-sided navbar links -->
-    <div class="w3-right">
-      <a href="#" class="w3-bar-item text-light w3-mobile">Home</a>
-      <div class="w3-dropdown-hover">
-
-      <a href="#" class="w3-bar-item text-light w3-mobile">About</a>
-      <a href="#" class="w3-bar-item text-light w3-mobile">Specialties</a>
-      <a href="#" class="w3-bar-item text-light w3-mobile">FAQs</a>
-      <a href="#" class="w3-bar-item text-light w3-mobile">Contact</a>
-      </div>
+    <div class="w3-right w3-padding-small">
+        <a href="#home" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-lime">Home</a>
+        <div class="w3-dropdown-hover w3-hide-small">
+          <button class="w3-button color-dark-brown w3-hover-none w3-hover-text-lime" title="Notifications">About <i class="fa fa-caret-down"></i></button>
+          <div class="w3-dropdown-content w3-bar-block color-dark-brown">
+            <a href="#" class="w3-bar-item w3-button w3-hover-none w3-hover-text-lime">Steve Darrow, LCSW</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-none w3-hover-text-lime">What to Expect</a>
+          </div>
+        </div>
+        <div class="w3-dropdown-hover w3-hide-small">
+          <button class="w3-button color-dark-brown w3-hover-none w3-hover-text-lime" title="Notifications">Specialties <i class="fa fa-caret-down"></i></button>
+          <div class="w3-dropdown-content w3-bar-block color-dark-brown">
+            <a href="#" class="w3-bar-item w3-button w3-hover-none w3-hover-text-lime">Adolescents</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-none w3-hover-text-lime">Adults</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-none w3-hover-text-lime">Couples</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-none w3-hover-text-lime">Parenting</a>
+          </div>
+        </div>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small  w3-hover-none w3-hover-text-lime">FAQs</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small  w3-hover-none w3-hover-text-lime">Contact</a>
     </div>
   </div>
 </div>
 
-<!-- Header -->
-<div class="w3-top w3-display-container hero-image w3-center" style="max-width:1920px;min-width:500px" id="home">
-  <div class="w3-display-middle">
-    <h1 class="w3-xxxlarge w3-center w3-text-white">Adolescent and Adult Psychotherapy</h1>
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-padding-large w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+  <a href="#team" class="w3-bar-item w3-button">Home</a>
+  <div class="w3-dropdown-click">
+    <button class="w3-button w3-black w3-hover-none w3-hover-text-lime" title="Notifications">About <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block color-dark-brown">
+      <a href="#" class="w3-bar-item w3-button w3-hover-none w3-hover-text-lime">Steve Darrow, LCSW</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-none w3-hover-text-lime">What to Expect</a>
+    </div>
+  </div>
+  <div class="w3-dropdown-click">
+    <button class="w3-button w3-black w3-hover-none w3-hover-text-lime" title="Notifications">Specialties <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block color-dark-brown">
+      <a href="#" class="w3-bar-item w3-button w3-hover-none w3-hover-text-lime">Adolescents</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-none w3-hover-text-lime">Adults</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-none w3-hover-text-lime">Couples</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-none w3-hover-text-lime">Parenting</a>
+    </div>
+    <a href="#pricing" class="w3-bar-item w3-button w3-hover-none w3-hover-text-lime">FAQs</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hover-none w3-hover-text-lime">Contact</a>
   </div>
 </div>
 
-<!-- Page content -->
-<div class="w3-content" style="max-width:1100px">
+<!-- Header with image-->
+<header class="hero-image w3-display-container" id="home">
+  <div class="w3-display-middle">
+    <h1 class="hero-heading">Adolescent and Adult Psychotherapy</h1>
+    <h2 class="hero-text">for Individual, Couples, and Family</h2>
+  </div>
+</header>
 
-  <!-- When Do I Know Section -->
-  <div class="w3-row w3-padding-32" id="When">
-    <h2 class="w3-center">When Do I Know It’s Time to Seek Counseling?</h2>
-    <div class="w3-col m5 w3-padding-large">
-      <p>People are encouraged to seek help when either life situations become overwhelming or when a problem negatively impacts either work or important relationships.</p>
+<!-- When Do I Know Section -->
+<div class="w3-container w3-light-gray" style="padding:40px 80px">
+  <h2 class="w3-center">When Do I Know It’s Time to Seek Counseling?</h2>
+  <div class="w3-row-padding" style="padding:20px 16px 40px">
+    <div class="w3-col m6">
+       <p>People are encouraged to seek help when either life situations become overwhelming or when a problem negatively impacts either work or important relationships.</p>
       <p>Many times people reach out to friends or understanding family members in order to make it through difficult times and this can adequately meet the need.</p>
       <p>Other times friends and family may have limitations in helping.</p>
     </div>
-    <div class="w3-col m6 w3-padding-40">
-      <img src="img/adult.jpg" class="w3-image" alt="Pensive Adult Male" width="400" height="300">
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large w3-margin" src="img/adult-600.jpg" alt="Pensive Adult Male" width="600" height="343">
     </div>
   </div>
 </div>
 
 <!-- People I Serve Section -->
-<div class="w3-content">
-  <div class="w3-row">
-      <h2 class="w3-col s12 w3-center text-green">People I Serve and Counseling Specialties</h2>
-  </div>
-
-  <div class="w3-row w3-container">
-    <div class="w3-card-4" style="width:50%">
-      <img src="img/teen1.jpg" alt="Teen1" style="width:100%">
-      <div class="w3-container w3-center">
-        <h2>Adolescents</h2>
+<div class="w3-container" style="padding:40px 16px" id="team">
+  <h2 class="w3-center text-green">People I Serve and Counseling Specialties</h2>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <!-- Card 1 -->
+      <div class="w3-col l3 m6 w3-margin-bottom myCardLink">
+        <div class="w3-card card-container">
+          <img src="img/teen1.jpg" alt="Teen1" style="width:100%">
+          <div class="w3-container">
+            <a href="#Adolescents"><h3 class="w3-center">Adolescents</h3></a>
+            <p>I see adolescents who struggle with issues such as drugs/alcohol, depression/anxiety, ADD/ADHD and have counseled them through their journey as they transition into adulthood.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    <!-- end Card 1 -->
 
-  <div class="w3-row w3-container">
-    <div class="w3-card-4" style="width:50%">
-      <img src="img/Adult1.jpg" alt="Adult1" style="width:100%">
-      <div class="w3-container w3-center">
-        <h2>Adults</h2>
+    <!-- Card 2 -->
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card card-container">
+        <img src="img/Adult1.jpg" alt="Adult1" style="width:100%">
+        <div class="w3-container">
+          <a href="#Adults"><h3 class="w3-center">Adults</h3></a>
+          <p>I help you discover motivating factors beneath your thinking, feelings, and behavior in order to unlock your own individual strengths to empower yourself towards healing and growth.</p>
+        </div>
       </div>
-    </div>
+    </div> <!-- end Card 2 -->
+    <!-- Card 3 -->
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card card-container">
+        <img src="img/couple1.jpg" alt="Couple 1" style="width:100%">
+        <div class="w3-container">
+          <a href="#Couples"><h3 class="w3-center">Couples</h3></a>
+          <p>In addition to traditional couples therapy, I offer Conjoint Couples Therapy for “high conflict” couples who are looking for something different to stop fighting with each other.</p>
+        </div>
+      </div>
+    </div> <!-- end Card 3 -->
+    <!-- Card 4 -->
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card card-container">
+        <img src="img/parenting1.jpg" alt="Parenting 1" style="width:100%">
+        <div class="w3-container">
+          <a href="#Adolescents"><h3 class="w3-center">Parenting</h3></a>
+          <p>I help you to raise self-confident, motivated children who are ready for the real world. I provide you with loving, yet powerful tools for parenting children of all ages.</p>
+        </div>
+      </div>
+    </div> <!-- end Card 4 -->
   </div>
 </div>
 
 <!-- Footer -->
-<div class="w3-container w3-center color-grayish-brown">
-  <p class="w3-large text-light">Steve Darrow, LCSW - Licensed Clinical Social Worker -  Lic.# LCS16584</p>
-  <p class="text-sand">85 Saratoga Avenue  Suite 203, Santa Clara, CA, 95051</p>
-  <p class="w3-medium text-lt-gray">Copyright 2018 Steve Darrow, LCSW. All rights reserved. </p>
+<div class="w3-container w3-padding-32 w3-center color-grayish-brown">
+  <p class="w3-xlarge text-light">Steve Darrow, LCSW - Licensed Clinical Social Worker -  Lic.# LCS16584</p>
+  <p class="w3-large text-sand">85 Saratoga Avenue  Suite 203, Santa Clara, CA, 95051
+    <br>408-985-1217</p>
+  <div class="w3-container">
+    <p class="w3-medium text-lt-gray">Copyright 2018 Steve Darrow, LCSW. All rights reserved.<a href="#" class="w3-bar-item w3-button w3-hover-none w3-large text-lt-gray w3-hover-text-lime w3-hide-small" style="text-decoration-line:underline;">
+      <i class="w3-margin-right"></i>Privacy Policy</a></p>
+  </div>
 </div>
 
+<script>
+// Script for side navigation
+function w3_open() {
+    var x = document.getElementById("mySidebar");
+    x.style.width = "300px";
+    x.style.paddingTop = "10%";
+    x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+  } else {
+      x.className = x.className.replace(" w3-show", "");
+  }
+}
+// Make card a link
+$(".myCardLink").click(function() {
+  window.location = $(this).find("a").attr("href");
+  return false;
+});
+</script>
 
 </body>
 </html>
