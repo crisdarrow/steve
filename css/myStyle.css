@@ -8,6 +8,27 @@ w3-xxlarge 36px
 w3-xxxlarge 48
 w3-jumbo 64px
 
+/* Changed Line 170 in w3.css
+from:
+.w3-black,.w3-hover-black:hover{color:#fff!important;background-color:#000!important}
+to:
+.w3-black,.w3-hover-black:hover{color:#F9F6F4!important;background-color:#282727!important}
+/* Changed Lines 51,52 in w3.css
+from:
+.w3-dropdown-hover:hover .w3-dropdown-content{display:block}
+.w3-dropdown-hover:first-child,.w3-dropdown-click:hover{background-color:#ccc;color:#000}
+to:
+.w3-dropdown-hover:hover .w3-dropdown-content{display:block}
+.w3-dropdown-hover:first-child,.w3-dropdown-click:hover{background-color:#282727;color:#F9F6F4}
+
+/* Changed Lines 53,54 in w3.css
+.w3-dropdown-hover:hover > .w3-button:first-child,.w3-dropdown-click:hover > .w3-button:first-child{background-color:#ccc;color:#000}
+  .w3-dropdown-content{cursor:auto;color:#000;background-color:#fff;display:none;position:absolute;min-width:160px;margin:0;padding:0;z-index:1}
+to:
+.w3-dropdown-hover:hover > .w3-button:first-child,.w3-dropdown-click:hover > .w3-button:first-child{background-color:#ccc;color:#000}
+.w3-dropdown-content{cursor:auto;color:#F9F6F4;background-color:#282727;display:none;position:absolute;min-width:160px;margin:0;padding:0;z-index:1}
+
+
 /* Color palette */
 .text-dark-brown{color:#282727}
 .color-dark-brown{background-color:#282727}
@@ -30,11 +51,10 @@ w3-jumbo 64px
   margin:auto
 }
 
-.w3-padding-16{padding-top:16px!important;padding-bottom:16px!important}
 /* Default page font */
 html, body {
   font-family: Roboto, Arial, serif;
-  font-size: 18px;
+  font-size: 20px;
   height: 100%;
   line-height: 1.5;
 }
@@ -70,6 +90,10 @@ a {
 }
 
 /* Custom Padding */
+.w3-padding-16 {
+  padding-top:16px;
+  padding-bottom:16px;
+}
 .w3-padding-18 {
   padding-top:18px;
   padding-bottom:18px;
@@ -79,55 +103,40 @@ a {
   padding-bottom:40px;
 }
 
-
 /* Navigation*/
-
 .w3-bar a {
   display: inline;
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
-  color:#bdc949;
+.w3-dropdown-content button, a {
+  color:#F9F6F4;
+  background-color:#282727;
+}
+.color-dark-brown,.hover-dark-brown:hover {
+  color:#F9F6F4;
+  background-color:#282727;
 }
 
+button.w3-button:hover {
+  color:#F9F6F4;
+  background-color:#282727;
+}
+.w3-dropdown-content a {
+  color:#F9F6F4;
+  background-color:#282727;
+}
+.w3-dropdown-hover:first-child,.w3-dropdown-click:hover {
+  background-color:#282727;
+  color:#F9F6F4;
+}
+.w3-hover-lime:hover{color:#bdc949!important;background-color:#282727!important}
+.w3-text-lime,.w3-hover-text-lime:hover{color:#bdc949!important}
 
-/* Extracted from w3.css
-.w3-bar-item {
-  padding:8px 16px;
-  float:left;
-  width:auto;
-  border:none;
-  display:block;
-  outline:0
+/* Extracted from https://www.w3schools.com/lib/w3-theme-black.css */
+.w3-theme-d2 {
+  color:#F9F6F4;
+  background-color:#282727;
 }
-.w3-bar .w3-dropdown-hover,.w3-bar .w3-dropdown-click {
-  position:static;
-  float:left
-}
-.w3-bar .w3-button {
-  white-space:normal
-}
-.w3-bar-block .w3-bar-item {
-  width:100%;
-  display:block;
-  padding:8px 16px;
-  text-align:left;
-  border:none;
-  white-space:normal;
-  float:none;
-  outline:0
-}
-.w3-bar-block.w3-center .w3-bar-item { text-align:center
-}
-.w3-block {
-  display:block;
-  width:100%
-}
-.w3-bar-item.w3-mobile, .w3-dropdown-hover.w3-mobile, .w3-dropdown-click.w3-mobile {
-  text-align:center;
-}
-*/
 
 /* Hero image */
 .hero-image {
@@ -145,24 +154,51 @@ a:hover {
 }
 
 /* Place text in the middle of the image */
-.hero-text {
+.hero-heading {
+  width: 778px;
+  height: 55px;
+  object-fit: contain;
+  font-family: Georgia;
+  font-size: 48px;
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  color: white;
+}
+.hero-text {
+  font-family: Roboto;
+  font-size: 34px;
+  letter-spacing: 0.5px;
+  text-align: center;
   color: white;
 }
 
-/* Media queries */
-/* Small phones: from 0 to 480px */
-@media only screen and (max-width: 480px) {
-
+/* Card */
+.card-container {
+  height: 500px;
+  object-fit: contain;
 }
+
+/* MEDIA QUERIES */
 
 /* Small phones to small tablets: from 481px to 767px */
 @media only screen and (max-width: 767px) {
+  body { font-size: 16px; }
 
+  .hero-heading h1  {
+    width: auto;
+    font-size: 30px;
+    object-fit: contain;
+  }
+  .hero-text h2  {
+    width: 100%;
+    font-size: 24px;
+  }
+  .w3-container {
+      padding:4px 0px;
+    }
+  .w3-image {
+      width: 100%;
+      height: auto;
+    }
 }
 
 /* Small tablet to big tablet: from 768px to 1023px */
